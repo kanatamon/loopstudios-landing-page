@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <script src="https://livejs.com/live.js"></script>
+
+  <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <nav>
+    <div>
+      <div>
+        <object data="images/logo.svg" type="image/svg+xml" width="192" height="32"></object>
+        <button id="menu-btn">
+          <img src="images/icon-hamburger.svg" alt="icon hamburger" width="24" height="16">
+        </button>
+        <button id="dismiss-btn">
+          <img src="images/icon-close.svg" alt="icon close" width="20" height="20">
+        </button>
+      </div>
+      <menu>
+        <ul>
+          <li><a href="#">about</a></li>
+          <li><a href="#">careers</a></li>
+          <li><a href="#">events</a></li>
+          <li><a href="#">products</a></li>
+          <li><a href="#">support</a></li>
+        </ul>
+      </menu>
+    </div>
+  </nav>
+
+  <header>
+    <div>
+      <h1>Immersive experiences that deliver</h1>
+    </div>
+  </header>
+
+  <main>
+    <div>
+      <section>
+        <img src="images/mobile/image-interactive.jpg" alt="">
+        <article>
+          <h2>The leader in interactive VR</h2>
+          <p>Founded in 2011, Loopstudios has been producing world-class virtual reality
+            projects for some of the best companies around the globe. Our award-winning
+            creations have transformed businesses through digital experiences that bind
+            to their brand.</p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Our creations</h2>
+        <ul>
+          <li data-creation="deep-earth"><h3>Deep earth</h3></li>
+          <li data-creation="night-arcade"><h3>Night arcade</h3></li>
+          <li data-creation="soccer-team-vr"><h3>Soccer team VR</h3></li>
+          <li data-creation="the-grid"><h3>The grid</h3></li>
+          <li data-creation="from-up-above-vr"><h3>From up above VR</h3></li>
+          <li data-creation="pocket-borealis"><h3>Pocket borealis</h3></li>
+          <li data-creation="the-curiosity"><h3>The curiosity</h3></li>
+          <li data-creation="make-it-fisheye"><h3>Make it fisheye</h3></li>
+        </ul>
+        <button>See all</button>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <object data="images/logo.svg" type="image/svg+xml" width="192" height="32"></object>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      <ul>
+        <li><a href="#"><img src="images/icon-facebook.svg"></img></a></li>
+        <li><a href="#"><img src="images/icon-twitter.svg"></img></a></li>
+        <li><a href="#"><img src="images/icon-pinterest.svg"></img></a></li>
+        <li><a href="#"><img src="images/icon-instagram.svg"></img></a></li>
+      </ul>
+      <p>© 2021 Loopstudios. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">kanatamon</a>.
+  </div>
+
+  <script>
+    const dismissBtn = document.querySelector('#dismiss-btn')
+    const menuBtn = document.querySelector('#menu-btn')
+    const nav = document.querySelector('nav')
+
+    dismissBtn.addEventListener('click', () => {
+      nav.classList.remove('--menu')
+      console.log('remove')
+    })
+    menuBtn.addEventListener('click', () => {
+      nav.classList.add('--menu')
+    })
+  </script>
+</body>
+</html>
